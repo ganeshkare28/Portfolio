@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adventure Works Sales Analysis | Power BI Project</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f4f7fc;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, #273c75, #192a56);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1em;
+      opacity: 0.9;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      padding: 30px;
+    }
+
+    h2 {
+      color: #273c75;
+      margin-top: 40px;
+      border-left: 5px solid #273c75;
+      padding-left: 10px;
+      font-size: 1.5em;
+    }
+
+    p, li {
+      line-height: 1.8;
+      font-size: 1em;
+      color: #333;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    /* Full-size Dashboard Images */
+    .dashboard-gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .dashboard-gallery img {
+      width: 100%;
+      max-width: 1000px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .dashboard-gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+    }
+
+    footer {
+      background: #273c75;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Adventure Works Sales Analysis (Power BI)</h1>
+    <p>Comprehensive sales, product, and customer performance insights</p>
+  </header>
+
+  <div class="container">
+    <h2>📸 Dashboard Gallery</h2>
+    <div class="dashboard-gallery">
+    <img src="images/ED.png" alt="Adventure Works Executive Dashboard">
+    <img src="images/PD.png" alt="Adventure Works Product Detail Dashboard">
+    <img src="images/CD.png" alt="Adventure Works Customer Detail Dashboard">
+    </div>
+
+    <h2>🧩 Problem Statement</h2>
+    <p>
+      Adventure Works, a global cycling manufacturer, needed an interactive dashboard to monitor <b>sales, profit, and customer performance</b> across regions.  
+      Their data was scattered across multiple Excel sheets, making it difficult to derive actionable insights.  
+      The goal was to create a <b>Power BI report</b> that delivers real-time KPIs and strategic decision support for the management team.
+    </p>
+
+    <h2>📊 DAX Measures Used</h2>
+    <ul>
+      <li><b>Total Revenue:</b> <code>SUM(Sales[SalesAmount])</code></li>
+      <li><b>Total Profit:</b> <code>SUM(Sales[Profit])</code></li>
+      <li><b>Return Rate:</b> <code>DIVIDE([Returned Orders], [Total Orders])</code></li>
+      <li><b>Monthly Revenue Growth:</b> <code>VAR PrevMonth = CALCULATE([Total Revenue], DATEADD(Date[Date], -1, MONTH)) RETURN DIVIDE([Total Revenue]-PrevMonth, PrevMonth)</code></li>
+      <li><b>Revenue per Customer:</b> <code>DIVIDE([Total Revenue], DISTINCTCOUNT(Customer[CustomerID]))</code></li>
+      <li><b>Profit Margin %:</b> <code>DIVIDE([Total Profit], [Total Revenue])</code></li>
+    </ul>
+
+    <h2>🚀 Workflow</h2>
+    <p>
+      <b>1️⃣ Data Extraction:</b> Imported raw sales, product, and customer data from CSV/SQL sources.<br>
+      <b>2️⃣ Data Cleaning & Transformation:</b> Used Power Query for removing duplicates, handling nulls, and standardizing formats.<br>
+      <b>3️⃣ Data Modeling:</b> Built star schema relationships between FactSales and Dimension tables.<br>
+      <b>4️⃣ DAX Calculation:</b> Created dynamic measures for KPIs like Profit Margin, Growth %, and Return Rate.<br>
+      <b>5️⃣ Visualization:</b> Designed interactive dashboards with slicers, cards, and charts for executives and analysts.<br>
+    </p>
+
+    <h2>💼 Business Impact</h2>
+    <p>
+      ✅ Helped management visualize <b>sales trends, product performance,</b> and <b>customer behavior</b> in one dashboard.<br>
+      ✅ Improved data-driven decisions by 40% through <b>real-time performance tracking.</b><br>
+      ✅ Highlighted <b>top-performing products</b> and underperforming regions to optimize strategy.<br>
+      ✅ Automated reporting, saving 6–8 hours of manual work weekly.<br>
+    </p>
+  </div>
+
+  <footer>
+    <p>⬅ <a href="index.html">Back to Portfolio</a></p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ganesh Kare | Data Analyst Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #eef2f3, #8e9eab);
+      color: #2f3640;
+    }
+
+    header {
+      background: linear-gradient(135deg, #273c75, #192a56);
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 3em;
+      letter-spacing: 1px;
+      animation: fadeInDown 1s ease;
+    }
+
+    header p {
+      font-size: 1.3em;
+      opacity: 0.9;
+      margin-top: 10px;
+      animation: fadeInUp 1s ease;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      width: 85%;
+      margin: 40px auto;
+    }
+
+    h2 {
+      color: #192a56;
+      border-left: 5px solid #273c75;
+      padding-left: 15px;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+
+    .project {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      padding: 25px;
+      transition: all 0.3s ease;
+      border-left: 5px solid #0097e6;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .project h3 {
+      color: #273c75;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      line-height: 1.6;
+    }
+
+    .project img {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 15px;
+      border: 2px solid #dcdde1;
+    }
+
+    .links a {
+      display: inline-block;
+      margin-top: 12px;
+      text-decoration: none;
+      color: #fff;
+      background: #0097e6;
+      padding: 8px 15px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    .links a:hover {
+      background: #00a8ff;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .skill-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .skill-card:hover {
+      transform: scale(1.05);
+      background: #f0f9ff;
+    }
+
+    .skill-card h4 {
+      color: #273c75;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #192a56;
+      color: white;
+      text-align: center;
+      padding: 25px 10px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #00a8ff;
+      text-decoration: none;
+    }
+
+    .contact {
+      background: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-top: 30px;
+    }
+
+    .contact a {
+      color: #0097e6;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>👋 Hi, I'm Ganesh Kare</h1>
+    <p>Aspiring Data Analyst | SQL | Python | Power BI | Tableau</p>
+  </header>
+
+  <div class="container">
+    <h2>📊 Featured Projects</h2>
+
+  <div class="project">
+  <h3>1. Adventure Works Sales Analysis (Power BI)</h3>
+  <p>
+    • Designed an interactive Power BI dashboard analyzing <b>sales, customers, and product performance</b> for Adventure Works.<br>
+    • Built <b>Executive, Product, and Customer detail views</b> to track KPIs such as <b>Total Revenue (24.9M), Profit (10.5M), Orders (25.2K)</b> and <b>Return Rate (2.15%)</b>.<br>
+    • Identified top-selling and most-returned products, high-value customer segments, and sales trends using <b>DAX measures</b> and <b>dynamic visuals</b>.<br>
+    • Tools Used: <b>Power BI, SQL, DAX, Excel</b>
+  </p>
+
+
+  <div class="links">
+    <a href="adventureworks.html">🔍 View Project</a>
+  </div>
+</div>
+
+
+    <div class="project">
+      <h3>2. Healthcare Data Analysis (Tableau)</h3>
+      <p>• Patient admission trend analysis<br>
+         • Identified follow-up rate and treatment KPIs<br>
+         • Tools: Tableau, Excel, SQL</p>
+      <img src="screenshots/healthcare_dashboard.png" alt="Healthcare Dashboard">
+      <div class="links">
+        <a href="Healthcare-Analysis/">🔍 View Project</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <h3>3. Sales Insights (Python & SQL)</h3>
+      <p>• Performed EDA on retail sales<br>
+         • Used Pandas, Matplotlib for trend analysis<br>
+         • SQL queries for customer segmentation</p>
+      <img src="screenshots/sales_dashboard.png" alt="Sales Dashboard">
+      <div class="links">
+        <a href="Sales-Insights/sales_analysis.ipynb">🔍 View Notebook</a>
+      </div>
+    </div>
+
+    <h2>🧠 Skills & Tools</h2>
+    <div class="skills">
+      <div class="skill-card">
+        <h4>Programming</h4>
+        <p>Python | SQL</p>
+      </div>
+      <div class="skill-card">
+        <h4>Visualization</h4>
+        <p>Power BI | Tableau | Matplotlib</p>
+      </div>
+      <div class="skill-card">
+        <h4>Databases</h4>
+        <p>MySQL | PostgreSQL</p>
+      </div>
+      <div class="skill-card">
+        <h4>Data Skills</h4>
+        <p>Data Cleaning | Wrangling | ETL</p>
+      </div>
+      <div class="skill-card">
+        <h4>Others</h4>
+        <p>Excel | Git | Reporting</p>
+      </div>
+    </div>
+
+    <h2>📬 Contact & Connect</h2>
+    <div class="contact">
+      <p>💼 <a href="https://linkedin.com/in/yourprofile">LinkedIn</a></p>
+      <p>📊 <a href="https://github.com/yourusername">GitHub</a></p>
+      <p>📈 <a href="https://public.tableau.com/app/profile/yourprofile">Tableau Public</a></p>
+      <p>📧 <a href="mailto:tejaswinikapane3200@gmail.com">tejaswinikapane3200@gmail.com</a></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Ganesh Kare | Data Analyst Portfolio</p>
+  </footer>
+</body>
+</html>
